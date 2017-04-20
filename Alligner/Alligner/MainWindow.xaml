@@ -8,7 +8,7 @@
         Title="MainWindow" Height="716" Width="1200" WindowState="Maximized">
     <Grid Margin="0,0,2,0">
         <Button x:Name="btnAlign" Content="Align" HorizontalAlignment="Left" Margin="1051,630,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.719,-0.25" Height="28" Click="btnAlign_Click"/>
-        <ProgressBar Name="pbStatus" HorizontalAlignment="Left" Height="28" Margin="44,630,0,0" VerticalAlignment="Top" Width="980" Minimum="0" Maximum="100" Value="0"/>
+        <ProgressBar Name="pbStatus" HorizontalAlignment="Left" Height="28" Margin="44,630,0,0" VerticalAlignment="Top" Width="980" Minimum="0" Value="0"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="562" Margin="178,35,0,0" VerticalAlignment="Top" Width="1154"/>
         
     </Grid>

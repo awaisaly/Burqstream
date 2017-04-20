@@ -40,6 +40,7 @@ namespace Alligner
             }
             return rigRelatives;
         }
+
         public string getPrincipalPoint(Dictionary<string, string> imgMetaData)
         {
             string PrincipalPoint = "";
@@ -50,6 +51,7 @@ namespace Alligner
             }
             return PrincipalPoint;
         }
+
         public string getBlackLevelVector(Dictionary<string, string> imgMetaData)
         {
             string BlackLevelVector = "";
@@ -60,6 +62,7 @@ namespace Alligner
             }
             return BlackLevelVector;
         }
+
         public string getVignettingPolynomial(Dictionary<string, string> imgMetaData)
         {
             string VignettingPolynomial = "";
@@ -70,6 +73,7 @@ namespace Alligner
             }
             return VignettingPolynomial;
         }
+
         public string getVignettingPolynomialName(Dictionary<string, string> imgMetaData)
         {
             string VignettingPolynomialName = "";
@@ -94,7 +98,10 @@ namespace Alligner
                 {
                     if (tag.Name != null & tag.Description != null)
                     {
-                        imgMetaData.Add(tag.Name, tag.Description);
+                        if (!imgMetaData.ContainsKey(tag.Name))
+                        {
+                            imgMetaData.Add(tag.Name, tag.Description); 
+                        }
                     }
                 }
                 if (directory.HasError)
@@ -107,9 +114,12 @@ namespace Alligner
             var xmpDirectory = ImageMetadataReader.ReadMetadata(path).OfType<XmpDirectory>().FirstOrDefault();
             foreach (var property in xmpDirectory.XmpMeta.Properties)
             {
-                if (property.Path != null & property.Value != null)
+                if (property.Path != null & property.Value != null )
                 {
-                    imgMetaData.Add(property.Path, property.Value);
+                    if (!imgMetaData.ContainsKey(property.Path))
+                    {
+                        imgMetaData.Add(property.Path, property.Value); 
+                    }
                 }
             }
 
@@ -118,7 +128,9 @@ namespace Alligner
 
         void progress(float arg)
         {
-            pbStatus.Dispatcher.Invoke(() => pbStatus.Value += 10, DispatcherPriority.Background);
+            Console.WriteLine(arg);
+            pbStatus.Maximum = 1;
+            pbStatus.Dispatcher.Invoke(() => pbStatus.Value = arg, DispatcherPriority.Background);
         }
 
         private void btnAlign_Click(object sender, RoutedEventArgs e)
