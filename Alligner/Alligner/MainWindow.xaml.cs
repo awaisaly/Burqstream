@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MetadataExtractor;
 using MetadataExtractor.Formats.Xmp;
+using System.Windows.Threading;
 
 namespace Alligner
 {
@@ -115,12 +116,12 @@ namespace Alligner
             return imgMetaData;
         }
 
-        static void progress(float arg)
+        void progress(float arg)
         {
-            Console.WriteLine("PROGRESS = {0}", arg);
+            pbStatus.Dispatcher.Invoke(() => pbStatus.Value += 10, DispatcherPriority.Background);
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void btnAlign_Click(object sender, RoutedEventArgs e)
         {
             Dictionary<string, string> imgMetaDataNIR = new Dictionary<string, string>();
             Dictionary<string, string> imgMetaDataRED = new Dictionary<string, string>();
@@ -175,8 +176,11 @@ namespace Alligner
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
+
+            ImageSource imageSource = new BitmapImage(new Uri(@"C:\Users\Awais Ali\Desktop\RedStickGolfCourse_151216\raw\NEW\IMG_161215_163145_0004_Output.TIF"));
+            image.Source = imageSource;
         }
     }
 }

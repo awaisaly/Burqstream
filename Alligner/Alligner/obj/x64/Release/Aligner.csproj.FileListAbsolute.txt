@@ -17,3 +17,4 @@ C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x
 C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Aligner.csproj.GenerateResource.Cache
 C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Alligner.exe
 C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Alligner.pdb
+C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Aligner.csprojResolveAssemblyReference.cache
