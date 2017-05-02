@@ -18,3 +18,6 @@ C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x
 C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Alligner.exe
 C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Alligner.pdb
 C:\Users\Awais Ali\Documents\Visual Studio 2015\Projects\Alligner\Alligner\obj\x64\Release\Aligner.csprojResolveAssemblyReference.cache
+C:\Users\Awais Ali\Documents\GitHub\Burqstream\Alligner\Alligner\bin\x64\Release\Alligner.exe.config
+C:\Users\Awais Ali\Documents\GitHub\Burqstream\Alligner\Alligner\obj\x64\Release\Alligner.exe
+C:\Users\Awais Ali\Documents\GitHub\Burqstream\Alligner\Alligner\obj\x64\Release\Alligner.pdb
